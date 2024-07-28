@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-const { buildModule } = require("@nomicfoundation/hardhat-ignition/modules");
-
-const JAN_1ST_2030 = 1893456000;
-const ONE_GWEI = 1_000_000_000n;
-
-module.exports = buildModule("LockModule", (m) => {
-  const unlockTime = m.getParameter("unlockTime", JAN_1ST_2030);
-  const lockedAmount = m.getParameter("lockedAmount", ONE_GWEI);
-
-  const lock = m.contract("Lock", [unlockTime], {
-    value: lockedAmount,
-  });
-
-  return { lock };
-});
-=======
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.19;
 
@@ -47,4 +30,3 @@ contract Swisstronik {
         return message;
     }
 }
->>>>>>> 3023c16ea124a2238640d6e60befd1ab194e9f1a
